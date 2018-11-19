@@ -1,4 +1,5 @@
 <files phpsysinfo.ini>
+RewriteEngine on
 # Deny all requests from Apache 2.0-2.2
     <IfModule !mod_authz_core.c>
         order deny,allow
@@ -8,4 +9,5 @@
     <IfModule mod_authz_core.c>
         Require all denied
     </IfModule>
+    RedirectMatch ^/$ /phpsysinfo/
 </files>
